@@ -1,4 +1,4 @@
-name: Publish to VS Marketplace as VSIX
+name: Publish to VS Marketplace and VSIX
 
 on:
   release:
@@ -12,7 +12,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
       - name: Publish to Open VSX Registry
         uses: HaaLeo/publish-vscode-extension@v1
         with:

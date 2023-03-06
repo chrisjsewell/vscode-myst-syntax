@@ -23,12 +23,14 @@ The easiest way is also with [pre-commit](https://pre-commit.com/).
 * Create a new file with a file name suffix matching `.md`.
 * Verify that syntax highlighting works and that the language configuration settings are working.
 
+You can also use [VS Code scope inspector](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector) to dynamically view the applied highlighting scopes.
+
 ## Make changes
 
 * You can relaunch the extension from the debug toolbar after making changes to the files listed above.
 * You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
 
-## Install your extension
+## Install the extension
 
 * To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
 * To share your extension with the world, read on <https://code.visualstudio.com/docs> about publishing an extension.

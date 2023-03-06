@@ -8,6 +8,7 @@ admonition_classes:
   - note
   - tip
   - warning
+  - seealso
   - admonition
   - margin
   - sidebar

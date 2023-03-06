@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "name": "myst-tml-syntax",
   "displayName": "MyST Syntax Highlighting",
   "description": "Texmate syntax highlighting for MyST Markdown.",

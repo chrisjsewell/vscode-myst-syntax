@@ -11,6 +11,12 @@
 Run the `src/build_grammar.py` script to generate the `syntaxes/myst.tmLanguage` file.
 Also [pre-commit](https://pre-commit.com/) is used to run this script before each commit.
 
+## Running the tests
+
+Tests are run using [vscode-tmgrammar-test
+TypeScript icon, indicating that this package has built-in type declarations](https://www.npmjs.com/package/vscode-tmgrammar-test/v/0.0.2)
+The easiest way is also with [pre-commit](https://pre-commit.com/).
+
 ## Get up and running straight away
 
 * Press `F5` to open a new window with the extension loaded.
@@ -26,3 +32,5 @@ Also [pre-commit](https://pre-commit.com/) is used to run this script before eac
 
 * To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
 * To share your extension with the world, read on <https://code.visualstudio.com/docs> about publishing an extension.
+- Use `vsce publish` to publish the extension to the marketplace.
+- Also see https://github.com/eclipse/openvsx/wiki/Publishing-Extensions

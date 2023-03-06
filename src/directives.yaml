@@ -1,0 +1,27 @@
+admonition_classes:
+  - attention
+  - caution
+  - danger
+  - error
+  - important
+  - hint
+  - note
+  - tip
+  - warning
+  - admonition
+  - margin
+  - sidebar
+  - toggle
+  - dropdown
+  - panels
+  - epigraph
+  - glossary
+  - tabbed
+  - tab-set
+  - tab-item
+  - div
+  - figure
+code_classes:
+  - code
+  - code-block
+  - code-cell

@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "name": "myst-tml-syntax",
+  "displayName": "MyST Syntax Highlighting",
+  "description": "Texmate syntax highlighting for MyST Markdown.",
+  "keywords": [
+    "markdown",
+    "myst",
+    "syntax",
+    "texmate"
+  ],
+  "authors": [
+    "Chris Sewell"
+  ],
+  "icon": "logo/icon_128x128.png",
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisjsewell/vscode-myst-syntax.git"
+  },
+  "homepage": "https://github.com/chrisjsewell/vscode-myst-syntax/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/chrisjsewell/vscode-myst-syntax/issues/new/choose"
+  },
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/myst.tmLanguage",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "scopeName": "text.myst.injection",
+        "embeddedLanguages": {
+          "meta.embedded.block.markdown": "text.html.markdown",
+          "meta.embedded.block.ipython": "source.python"
+        }
+      }
+    ]
+  }
+}

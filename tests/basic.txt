@@ -1,0 +1,39 @@
+-- SYNTAX TEST "text.myst.injection" "line_comment"
+% a comment
+-- <------------ comment.line.percentage.myst
+
+-- SYNTAX TEST "text.myst.injection" "block_break"
++++ {}
+-- <--- keyword.other.block_break.myst
+--  ^^ markup.attributes.block_break.myst
+
+-- SYNTAX TEST "text.myst.injection" "target_block"
+(abc)=
+-- <~--- support.variable.target.myst
+--   ^ punctuation.target.myst
+
+-- SYNTAX TEST "text.myst.injection" "role_span"
+{name}`content`
+-- <~---- support.function.role.myst
+--     ^^^^^^^ markup.inline.raw.string.role.myst
+
+-- SYNTAX TEST "text.myst.injection" "div-directive-block-start"
+:::{name} argument
+--  ^^^^ support.class.directive.myst
+--        ^^^^^^^^ markup.inline.raw.string.attribute.myst
+
+-- SYNTAX TEST "text.myst.injection" "directive-admonitions"
+```{note} argument
+--  ^^^^ support.class.directive.myst
+--        ^^^^^^^^ markup.inline.raw.string.attribute.myst
+content
+-- <~~~- meta.paragraph.markdown
+```
+
+-- SYNTAX TEST "text.myst.injection" "directive-default"
+```{other} argument
+--  ^^^^^ support.class.directive.myst
+--         ^^^^^^^^ markup.inline.raw.string.attribute.myst
+content
+-- <~~~- markup.raw.content.myst
+```

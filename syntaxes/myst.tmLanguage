@@ -127,7 +127,7 @@
 		<key>div-directive-block-start</key>
 		<dict>
 			<key>match</key>
-			<string>(?:^|\G)[ ]{0,3}(:{3,})\{([\:\-\_0-9a-zA-A]*)\}(.+)</string>
+			<string>(?:^|\G)[ ]{0,3}(:{3,})\{([\:\-\_0-9a-zA-A]*)\}(.*)</string>
 			<key>captures</key>
 			<dict>
 				<key>2</key>

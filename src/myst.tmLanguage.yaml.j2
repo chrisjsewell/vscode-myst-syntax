@@ -44,7 +44,7 @@ repository:
       "3": { name: markup.inline.raw.string.role.myst }
 
   div-directive-block-start:
-    match: '(?:^|\G)[ ]{0,3}(:{3,})\{([\:\-\_0-9a-zA-A]*)\}(.+)'
+    match: '(?:^|\G)[ ]{0,3}(:{3,})\{([\:\-\_0-9a-zA-A]*)\}(.*)'
     captures:
       "2": { name: support.class.directive.myst }
       "3": { name: markup.inline.raw.string.attribute.myst }

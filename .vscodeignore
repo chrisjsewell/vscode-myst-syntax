@@ -5,3 +5,4 @@ _archive/**
 src/**
 tests/**
 .github/**
+.pre-commit-config.yaml

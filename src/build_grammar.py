@@ -10,7 +10,6 @@ DIRECTIVE_PATH = Path(__file__).parent.joinpath("directives.yaml")
 OUT_PATH = Path(__file__).parent.joinpath("../syntaxes/myst.tmLanguage")
 
 if __name__ == "__main__":
-
     # read variables
     directives = yaml.safe_load(DIRECTIVE_PATH.read_text("utf8"))
     languages = yaml.safe_load(LANGUAGE_PATH.read_text("utf8"))

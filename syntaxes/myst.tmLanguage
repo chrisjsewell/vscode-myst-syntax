@@ -36,6 +36,10 @@
 		</dict>
 		<dict>
 			<key>include</key>
+			<string>#directive-math</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#directive-code</string>
 		</dict>
 		<dict>
@@ -196,6 +200,90 @@
 			</array>
 			<key>name</key>
 			<string>markup.directive.admonition.myst</string>
+		</dict>
+		<key>directive-math</key>
+		<dict>
+			<key>begin</key>
+			<string>(^|\G)(\s*)(`{3,}|~{3,})\{(math)\}\s*(?=([^`~]*)?$)</string>
+			<key>name</key>
+			<string>markup.directive.math.myst</string>
+			<key>end</key>
+			<string>(^|\G)(\2|\s{0,3})(\3)\s*$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.myst</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.directive.myst</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>support.variable.language.myst</string>
+				</dict>
+			</dict>
+			<key>endCaptures</key>
+			<dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.myst</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(^|\G)(\s*)(.*)</string>
+					<key>while</key>
+					<string>(^|\G)(?!\s*([\`~]{3,})\s*$)</string>
+					<key>contentName</key>
+					<string>meta.embedded.block.latex</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>begin</key>
+							<string>(^|\G)(-{3})\s*$</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.options.myst</string>
+								</dict>
+							</dict>
+							<key>end</key>
+							<string>(^|\G)(-{3})\s*$</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.options.myst</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>meta.embedded.block.options</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.yaml</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>text.html.markdown.math#math</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 		</dict>
 		<key>directive-code</key>
 		<dict>

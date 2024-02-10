@@ -38,7 +38,8 @@
         "scopeName": "text.myst.injection",
         "embeddedLanguages": {
           "meta.embedded.block.markdown": "text.html.markdown",
-          "meta.embedded.block.ipython": "source.python"
+          "meta.embedded.block.ipython": "source.python",
+          "meta.embedded.block.latex": "latex"
         }
       }
     ]

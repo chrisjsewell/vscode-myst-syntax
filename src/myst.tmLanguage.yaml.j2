@@ -9,6 +9,7 @@ patterns:
   - { include: "#role_span" }
   - { include: "#div-directive-block-start" }
   - { include: "#directive-admonitions" }
+  - { include: "#directive-math" }
   - { include: "#directive-code" }
   - { include: "#directive-default" }
 
@@ -66,6 +67,32 @@ repository:
         patterns:
           - { include: text.html.markdown }
     name: markup.directive.admonition.myst
+
+  directive-math:
+    begin: (^|\G)(\s*)(`{3,}|~{3,})\{(math)\}\s*(?=([^`~]*)?$)
+    name: markup.directive.math.myst
+    end: (^|\G)(\2|\s{0,3})(\3)\s*$
+    beginCaptures:
+      '3': {name: 'punctuation.definition.myst'}
+      '4': {name: 'support.class.directive.myst'}
+      '5': {name: 'support.variable.language.myst'}
+    endCaptures:
+      '3': {name: 'punctuation.definition.myst'}
+    patterns:
+      - begin: (^|\G)(\s*)(.*)
+        while: (^|\G)(?!\s*([\`~]{3,})\s*$)
+        contentName: meta.embedded.block.latex
+        patterns:
+          - begin: (^|\G)(-{3})\s*$
+            beginCaptures:
+              '1': {name: 'punctuation.options.myst'}
+            end: (^|\G)(-{3})\s*$
+            endCaptures:
+              '2': {name: 'punctuation.options.myst'}
+            contentName: meta.embedded.block.options
+            patterns:
+              - {include: source.yaml}
+          - {include: text.html.markdown.math#math}
 
   directive-code:
     comment: These are directive blocks containing code
